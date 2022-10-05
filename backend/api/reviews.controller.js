@@ -39,7 +39,7 @@ export default class ReviewController {
   static async apiDeleteReview(req, res, next) {
     try {
       const reviewId = req.query.id;
-      const userId = req.query.user_id;
+      const userId = req.body.user_id;
       console.log(reviewId);
       await ReviewsDAO.deleteReview(reviewId, userId);
       res.json({ status: "success" });
