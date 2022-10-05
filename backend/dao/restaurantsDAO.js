@@ -1,3 +1,5 @@
+import mongodb from "mongodb";
+const myObjectId = mongodb.ObjectID;
 let restaurants;
 
 export default class RestaurantsDAO {
@@ -38,6 +40,40 @@ export default class RestaurantsDAO {
     } catch (e) {
       console.error(`Unable to convert cursor to array or problem counting documents, ${e}`);
       return { restaurantsList: [], totalNumRestaurants: 0 };
+    }
+  }
+  static async getRestaurantByID(id) {
+    try {
+      const pipeline = [
+        {
+          $match: {
+            _id: new myObjectId(id),
+          },
+        },
+        {
+          $lookup: {
+            from: "reviews",
+            let: { id: "$_id" },
+            pipeline: [{ $match: { $expr: { $eq: ["$restaurant_id", "$$id"] } } }, { $sort: { date: -1 } }],
+            as: "reviews",
+          },
+        },
+        { $addFields: { reviews: "$reviews" } },
+      ];
+      return await restaurants.aggregate(pipeline).next();
+    } catch (e) {
+      console.error(`Something went wrong in getRestaurantById;  ${e}`);
+      throw e;
+    }
+  }
+  static async getCuisines() {
+    let cuisines = [];
+    try {
+      cuisines = await restaurants.distinct("cuisine");
+      return cuisines;
+    } catch (e) {
+      console.error(`Unable to get cusines, ${e}`);
+      return cuisines;
     }
   }
 }

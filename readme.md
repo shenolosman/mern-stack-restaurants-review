@@ -9,3 +9,52 @@ for this project installed $ `npm install express cors mongodb dotenv` , $ `npm 
 MongoDB [link](https://cloud.mongodb.com/). used sample db restaurants. for name search added index
 
 Postman uses for test api.
+
+
+
+## Postman Api call links:
+
+### "get" http://localhost:5000/api/v1/restaurants
+
+### "Post" http://localhost:5000/api/v1/restaurants/reviews
+
+Body/Json `{
+"restaurant_id":"5eb3d668b31de5d588f4292d",
+"text":"Great Food!",
+"user_id":"1234",
+"name":"Shenol"    
+}`
+
+### "get" http://localhost:5000/api/v1/restaurants?zipcode=11225
+### "get" http://localhost:5000/api/v1/restaurants?zipcode=11225&page=2
+### "get" http://localhost:5000/api/v1/restaurants?cuisine=American
+### "get" http://localhost:5000/api/v1/restaurants?name=food
+### "post" http://localhost:5000/api/v1/restaurants/review
+Body/json `{
+"restaurant_id":"5eb3d668b31de5d588f42935",
+"text":"Vegan Chikpea Rulle",
+"user_id":"40388637",
+"name":"Merve"    
+}`
+
+### "put" http://localhost:5000/api/v1/restaurants/review
+Body/json `{
+"review_id":"633ca27a03254c211537db7d",
+"text":"Great Food was that",
+"user_id":"40388637",
+"name":"Shenol"    
+}`
+
+### "delete" http://localhost:5000/api/v1/restaurants/review?id=633ca27a03254c211537db7d (restauranid)
+Body/json `{
+"user_id":"40388637",
+"name":"Shenol"    
+}`
+
+### "get" http://localhost:5000/api/v1/restaurants/id/5eb3d668b31de5d588f42bde (restaurantid)
+
+
+
+
+
+
