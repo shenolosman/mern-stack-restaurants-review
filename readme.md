@@ -1,5 +1,5 @@
 # Mern restaurant review web app
-
+# Backend With MongoDb and Express with NodeJs
 ## start ``nodemon server`` inside backend folder. Link for local restaurants go link `http://localhost:5000/api/v1/restaurants`
 
 ### To build app :
@@ -54,6 +54,11 @@ Body/json `{
 ### "get" http://localhost:5000/api/v1/restaurants/id/5eb3d668b31de5d588f42bde (restaurantid)
 
 
+
+# Frontend With React and Bootstrap
+
+installed react with couple extra packages: 
+`npx create-react-app frontend` , `npm install react-router-dom@5`. `npm install bootstrap`
 
 
 
