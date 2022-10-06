@@ -58,8 +58,8 @@ Body/json `{
 # Frontend With React and Bootstrap
 
 installed react with couple extra packages: 
-`npx create-react-app frontend` , `npm install react-router-dom@5`. `npm install bootstrap`
+`npx create-react-app frontend` , `npm install react-router-dom@5`. `npm install bootstrap` , `npm install axios`
 
-
+Axios uses for api calls
 
 
