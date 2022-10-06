@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import RestaurantDataService from "../services/restaurant";
 import { Link } from "react-router-dom";
-import restaurant from "../services/restaurant";
 const RestaurantsList = (props) => {
   const [restaurants, setRestaurants] = useState([]);
   const [searchName, setSearchName] = useState("");
@@ -139,6 +138,7 @@ const RestaurantsList = (props) => {
                     <strong>Address :</strong> {address}
                   </p>
                   <Link to={`/restaurants/` + restaurant._id} className="card-link">
+                    {/* {console.log(`/restaurants/` + restaurant._id)} */}
                     View Reviews
                   </Link>
                   <a href={`https://www.google.com/maps/place/` + address} className="card-link" target="_blank" rel="noreferrer">

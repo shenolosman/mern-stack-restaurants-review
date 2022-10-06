@@ -1,5 +1,5 @@
 import mongodb from "mongodb";
-const myObjectId = mongodb.ObjectID
+const myObjectId = mongodb.ObjectId
 let reviews;
 
 export default class ReviewsDAO {

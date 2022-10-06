@@ -13,6 +13,7 @@ MongoClient
   .connect(process.env.RESTREVIEWS_DB_URI, {
     maxPoolSize: 50,
     waitQueueTimeoutMS: 2500,
+    wtimeoutMS:2500,
     useNewUrlParser:true //added last 
   })
   .catch((err) => {
