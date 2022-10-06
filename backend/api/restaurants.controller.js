@@ -45,7 +45,7 @@ export default class RestaurantsController {
   static async apiGetRestaurantCuisines(req, res, next) {
     try {
       let cuisines = await RestaurantsDAO.getCuisines();
-      rest.json(cuisines);
+      res.json(cuisines);
     } catch (e) {
       console.log(`api, ${e}`);
       res.status(500).json({ error: e });
