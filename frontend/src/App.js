@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import { AddReview, Login, Restaurants, RestaurantsList } from "./components";
@@ -37,9 +38,9 @@ function App() {
             </li>
             {user ? (
               <li className="nav-item active">
-                <Link to={"logout"} className="nav-link">
+                <a onClick={logout} className="nav-link">
                   Logout {user.name}
-                </Link>
+                </a>
               </li>
             ) : (
               <li className="nav-item active">

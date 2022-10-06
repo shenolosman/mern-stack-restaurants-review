@@ -62,4 +62,6 @@ installed react with couple extra packages:
 
 Axios uses for api calls
 
-
+Test user: shenol
+Tes user id:1234
+Test zipcode rest: 11223 (Seuda Foods)

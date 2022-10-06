@@ -72,7 +72,7 @@ const Restaurants = (props) => {
                         </p>
                         {props.user && props.user.id === review.user_id && (
                           <div className="row">
-                            <button onClick={() => deleteReview(review._id, index)} className="btn btn-outline-success">
+                            <button onClick={() => deleteReview(review._id, index)} className="btn btn-danger col-md-4 mx-1">
                               Delete
                             </button>
                             <Link
@@ -80,7 +80,7 @@ const Restaurants = (props) => {
                                 pathname: "/restaurants/" + props.match.params.id + "/review",
                                 state: { currentReview: review },
                               }}
-                              className="btn btn-outline-warning col-md-5 mx-1 mb-1"
+                              className="btn btn-outline-warning col-md-6 mx-1"
                             >
                               Edit
                             </Link>
