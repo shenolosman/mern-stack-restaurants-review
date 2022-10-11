@@ -65,3 +65,14 @@ Axios uses for api calls
 Test user: shenol
 Tes user id:1234
 Test zipcode rest: 11223 (Seuda Foods)
+
+
+Screenshots:
+
+!["home"](frontend/public/img/home.jpg)
+
+!["detail"](frontend/public/img/detail.jpg)
+
+!["edit"](frontend/public/img/edit.jpg)
+
+!["login"](frontend/public/img/login.jpg)
